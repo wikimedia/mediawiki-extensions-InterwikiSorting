@@ -25,7 +25,7 @@ class InterwikiSortingHooks {
 			return;
 		}
 
-		$handler = ParserOutputUpdateHookHandlers::newFromGlobalState();
+		$handler = InterwikiSortingHookHandlers::newFromGlobalState();
 		$handler->doContentAlterParserOutput( $title, $parserOutput );
 	}
 
