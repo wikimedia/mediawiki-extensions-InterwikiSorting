@@ -17,7 +17,7 @@ class InterwikiSortingHooksTest extends MediaWikiTestCase {
 
 	public function testHooksAreCorrectlyRegistered() {
 		$initHook = InterwikiSortingHooks::class . '::onBeforeInitialize';
-		$finalHook = [ InterwikiSortingHooks::class, 'onContentAlterParserOutput' ];
+		$finalHook = InterwikiSortingHooks::class. '::onContentAlterParserOutput';
 
 		// Make sure the first hook has been registered
 		$this->assertContains( $initHook, Hooks::getHandlers( 'BeforeInitialize' ) );

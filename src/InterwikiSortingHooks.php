@@ -41,7 +41,7 @@ class InterwikiSortingHooks {
 		 * which will return hooks in $wgHooks last.
 		 */
 		$wgHooks['ContentAlterParserOutput'][] =
-			array( InterwikiSortingHooks::class, 'onContentAlterParserOutput' );
+			InterwikiSortingHooks::class . '::onContentAlterParserOutput';
 	}
 
 }
