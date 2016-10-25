@@ -29,7 +29,7 @@ class InterwikiSortingHookHandlers {
 		return new InterwikiSortingHookHandlers(
 			new InterwikiSorter(
 				$config->get( 'InterwikiSortingSort' ),
-				$config->get( 'InterwikiSortOrders' ),
+				$config->get( 'InterwikiSortingInterwikiSortOrders' ),
 				$config->get( 'InterwikiSortingSortPrepend' )
 			),
 			$config->get( 'InterwikiSortingNamespaces' ),
