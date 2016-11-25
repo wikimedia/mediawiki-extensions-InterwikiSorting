@@ -3,7 +3,6 @@
 namespace InterwikiSorting;
 
 use Content;
-use MediaWiki;
 use ParserOutput;
 use Title;
 
