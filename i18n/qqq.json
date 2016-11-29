@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Addshore"
+			"Addshore",
+			"Raymond"
 		]
 	},
-	"interwikisorting-desc": "{{desc|name=Cognate|url=https://www.mediawiki.org/wiki/Extension:InterwikiSorting}}"
+	"interwikisorting-desc": "{{desc|name=Interwiki Sorting|url=https://www.mediawiki.org/wiki/Extension:InterwikiSorting}}"
 }
