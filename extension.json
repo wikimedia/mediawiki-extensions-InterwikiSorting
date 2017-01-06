@@ -8,6 +8,9 @@
   "descriptionmsg": "interwikisorting-desc",
   "license-name": "GPL-2.0+",
   "type": "other",
+  "requires": {
+    "MediaWiki": ">= 1.27.0"
+  },
   "config": {
     "InterwikiSortingNamespaces": [],
     "InterwikiSortingAlwaysSort": false,
