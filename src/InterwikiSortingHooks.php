@@ -32,6 +32,7 @@ class InterwikiSortingHooks {
 		/* Deliberately ignore all params ( We dont need them ) */
 	) {
 		global $wgHooks;
+
 		/**
 		 * The ContentAlterParserOutput hook is registered in the BeforeInitialize so that
 		 * the sorting of interwiki links is always done after anything else might change the
@@ -39,8 +40,7 @@ class InterwikiSortingHooks {
 		 * Hooks::register() can not be used due to the array_merge in Hooks::getHandlers()
 		 * which will return hooks in $wgHooks last.
 		 */
-		$wgHooks['ContentAlterParserOutput'][] =
-			InterwikiSortingHooks::class . '::onContentAlterParserOutput';
+		$wgHooks['ContentAlterParserOutput'][] = self::class . '::onContentAlterParserOutput';
 	}
 
 }
