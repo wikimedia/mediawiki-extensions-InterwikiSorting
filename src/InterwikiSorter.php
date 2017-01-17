@@ -42,7 +42,7 @@ class InterwikiSorter {
 	 * @param array[] $sortOrders
 	 * @param string[] $sortPrepend
 	 */
-	public function __construct( $sort, array $sortOrders = array(), array $sortPrepend = array() ) {
+	public function __construct( $sort, array $sortOrders = [], array $sortPrepend = [] ) {
 		$this->sort = $sort;
 		$this->sortOrders = $sortOrders;
 		$this->sortPrepend = $sortPrepend;
@@ -66,7 +66,7 @@ class InterwikiSorter {
 			$links[$k] = explode( ':', $langLink, 2 );
 		}
 
-		usort( $links, array( $this, 'compareLinks' ) );
+		usort( $links, [ $this, 'compareLinks' ] );
 
 		// Restore the sorted array.
 		foreach ( $links as $k => $langLink ) {
@@ -120,19 +120,19 @@ class InterwikiSorter {
 	private function buildSortOrder( $sort, array $sortOrders ) {
 		if ( $sort === self::SORT_CODE ) {
 			// The concept of known/unknown languages is irrelevant in strict code order.
-			$sortOrder = array();
+			$sortOrder = [];
 		} elseif ( !array_key_exists( $sort, $sortOrders ) ) {
 			// Something went wrong, but we can use default "code" order.
 			wfDebugLog(
 				__CLASS__,
 				__FUNCTION__ . ': Invalid or unknown sort order specified for interwiki links.'
 			);
-			$sortOrder = array();
+			$sortOrder = [];
 		} else {
 			$sortOrder = $sortOrders[$sort];
 		}
 
-		if ( $this->sortPrepend !== array() ) {
+		if ( $this->sortPrepend !== [] ) {
 			$sortOrder = array_unique( array_merge( $this->sortPrepend, $sortOrder ) );
 		}
 
