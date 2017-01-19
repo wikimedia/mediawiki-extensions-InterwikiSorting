@@ -12,9 +12,6 @@ namespace InterwikiSorting;
  */
 class InterwikiSorter {
 
-	/**
-	 * @see Documentation of "sort" and "interwikiSortOrders" options in docs/options.wiki.
-	 */
 	const SORT_CODE = 'code';
 
 	/**
