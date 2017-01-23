@@ -18,11 +18,6 @@ class InterwikiSortingHookHandlers {
 	 */
 	private $alwaysSort;
 
-	/**
-	 * @var int[]
-	 */
-	private $namespaces;
-
 	public static function newFromGlobalState() {
 		$config = MediaWikiServices::getInstance()->getMainConfig();
 
@@ -32,23 +27,19 @@ class InterwikiSortingHookHandlers {
 				$config->get( 'InterwikiSortingInterwikiSortOrders' ),
 				$config->get( 'InterwikiSortingSortPrepend' )
 			),
-			$config->get( 'InterwikiSortingNamespaces' ),
 			$config->get( 'InterwikiSortingAlwaysSort' )
 		);
 	}
 
 	/**
 	 * @param InterwikiSorter $sorter
-	 * @param int[] $namespaces
 	 * @param boolean $alwaysSort
 	 */
 	public function __construct(
 		InterwikiSorter $sorter,
-		$namespaces,
 		$alwaysSort
 	) {
 		$this->interwikiSorter = $sorter;
-		$this->namespaces = $namespaces;
 		$this->alwaysSort = $alwaysSort;
 	}
 
@@ -62,11 +53,6 @@ class InterwikiSortingHookHandlers {
 	 * @return bool
 	 */
 	public function doContentAlterParserOutput( Title $title, ParserOutput $parserOutput ) {
-		if ( !$title->inNamespaces( $this->namespaces ) ) {
-			// shorten out
-			return true;
-		}
-
 		if ( $this->alwaysSort ) {
 			$interwikiLinks = $parserOutput->getLanguageLinks();
 			$sortedLinks = $this->interwikiSorter->sortLinks( $interwikiLinks );

@@ -12,7 +12,6 @@
     "MediaWiki": ">= 1.27.0"
   },
   "config": {
-    "InterwikiSortingNamespaces": [],
     "InterwikiSortingAlwaysSort": false,
     "InterwikiSortingSort": "code",
     "InterwikiSortingSortPrepend": [],
