@@ -2,7 +2,10 @@
   "name": "InterwikiSorting",
   "version": "0.0.1",
   "author": [
-    "WMDE"
+    "Addshore",
+    "Nikola Smolenski",
+    "Katie Filbert",
+    "Thiemo Mättig"
   ],
   "url": "https://www.mediawiki.org/wiki/Extension:InterwikiSorting",
   "descriptionmsg": "interwikisorting-desc",
