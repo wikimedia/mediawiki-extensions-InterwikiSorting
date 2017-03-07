@@ -1,36 +1,38 @@
 {
-  "name": "InterwikiSorting",
-  "version": "0.0.1",
-  "author": [
-    "Addshore",
-    "Nikola Smolenski",
-    "Katie Filbert",
-    "Thiemo Mättig"
-  ],
-  "url": "https://www.mediawiki.org/wiki/Extension:InterwikiSorting",
-  "descriptionmsg": "interwikisorting-desc",
-  "license-name": "GPL-2.0+",
-  "type": "other",
-  "requires": {
-    "MediaWiki": ">= 1.27.0"
-  },
-  "config": {
-    "InterwikiSortingSort": "code",
-    "InterwikiSortingSortPrepend": [],
-    "InterwikiSortingInterwikiSortOrders": []
-  },
-  "AutoloadClasses": {
-    "InterwikiSorting\\InterwikiSorter": "src/InterwikiSorter.php",
-    "InterwikiSorting\\InterwikiSortingHooks": "src/InterwikiSortingHooks.php",
-    "InterwikiSorting\\InterwikiSortingHookHandlers": "src/InterwikiSortingHookHandlers.php"
-  },
-  "Hooks": {
-    "BeforeInitialize": [ "InterwikiSorting\\InterwikiSortingHooks::onBeforeInitialize" ]
-  },
-  "MessagesDirs": {
-    "InterwikiSorting": [
-      "i18n"
-    ]
-  },
-  "manifest_version": 1
+	"name": "InterwikiSorting",
+	"version": "0.0.1",
+	"author": [
+		"Addshore",
+		"Nikola Smolenski",
+		"Katie Filbert",
+		"Thiemo Mättig"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:InterwikiSorting",
+	"descriptionmsg": "interwikisorting-desc",
+	"license-name": "GPL-2.0+",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.27.0"
+	},
+	"config": {
+		"InterwikiSortingSort": "code",
+		"InterwikiSortingSortPrepend": [],
+		"InterwikiSortingInterwikiSortOrders": []
+	},
+	"AutoloadClasses": {
+		"InterwikiSorting\\InterwikiSorter": "src/InterwikiSorter.php",
+		"InterwikiSorting\\InterwikiSortingHooks": "src/InterwikiSortingHooks.php",
+		"InterwikiSorting\\InterwikiSortingHookHandlers": "src/InterwikiSortingHookHandlers.php"
+	},
+	"Hooks": {
+		"BeforeInitialize": [
+			"InterwikiSorting\\InterwikiSortingHooks::onBeforeInitialize"
+		]
+	},
+	"MessagesDirs": {
+		"InterwikiSorting": [
+			"i18n"
+		]
+	},
+	"manifest_version": 1
 }
