@@ -24,11 +24,9 @@
 		"InterwikiSorting\\InterwikiSortingHooks": "src/InterwikiSortingHooks.php",
 		"InterwikiSorting\\InterwikiSortingHookHandlers": "src/InterwikiSortingHookHandlers.php"
 	},
-	"Hooks": {
-		"BeforeInitialize": [
-			"InterwikiSorting\\InterwikiSortingHooks::onBeforeInitialize"
-		]
-	},
+	"ExtensionFunctions": [
+		"InterwikiSorting\\InterwikiSortingHooks::registerHook"
+	],
 	"MessagesDirs": {
 		"InterwikiSorting": [
 			"i18n"

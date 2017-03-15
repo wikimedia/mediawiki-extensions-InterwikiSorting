@@ -28,9 +28,7 @@ class InterwikiSortingHooks {
 		$handler->doContentAlterParserOutput( $title, $parserOutput );
 	}
 
-	public static function onBeforeInitialize(
-		/* Deliberately ignore all params ( We dont need them ) */
-	) {
+	public static function registerHook() {
 		global $wgHooks;
 
 		/**
