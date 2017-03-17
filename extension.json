@@ -15,8 +15,11 @@
 		"MediaWiki": ">= 1.27.0"
 	},
 	"config": {
+		"@InterwikiSortingSort": "The default sort order to use. 'code' is build in and orders alphabetically by interwiki code.",
 		"InterwikiSortingSort": "code",
+		"@InterwikiSortingSortPrepend": "Codes that should appear at the start of the list of interwiki links.",
 		"InterwikiSortingSortPrepend": [],
+		"@InterwikiSortingInterwikiSortOrders": "Definition of sort orders. Each sort order key should be the sort order name, for example 'alphabetical'. Each key should have a value of an array of interwiki codes in the order to be sorted.",
 		"InterwikiSortingInterwikiSortOrders": []
 	},
 	"AutoloadClasses": {
