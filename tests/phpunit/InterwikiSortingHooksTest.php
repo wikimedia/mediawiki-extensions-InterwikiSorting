@@ -4,7 +4,6 @@ namespace InterwikiSorting\Tests;
 
 use Hooks;
 use InterwikiSorting\InterwikiSortingHooks;
-use MediaWiki;
 use MediaWikiTestCase;
 
 /**
