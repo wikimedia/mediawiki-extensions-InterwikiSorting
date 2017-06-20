@@ -25,7 +25,6 @@ class InterwikiSortingHooksTest extends MediaWikiTestCase {
 			end( $onContentAlterParserOutputHooks ),
 			'Hook should be the last to be fired'
 		);
-
 	}
 
 }
