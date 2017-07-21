@@ -5,6 +5,7 @@
 	<rule ref="Generic.Formatting.NoSpaceAfterCast" />
 	<rule ref="Generic.Metrics.CyclomaticComplexity" />
 	<rule ref="Generic.Metrics.NestingLevel" />
+	<rule ref="PSR1.Files.SideEffects" />
 	<rule ref="Squiz.Operators.ValidLogicalOperators" />
 
 	<file>.</file>
