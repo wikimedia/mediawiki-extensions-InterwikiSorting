@@ -9,7 +9,7 @@ use MediaWikiTestCase;
 /**
  * @covers InterwikiSorting\InterwikiSortingHooks
  *
- * @license GPL-2.0+
+ * @license GPL-2.0-or-later
  * @author Addshore
  */
 class InterwikiSortingHooksTest extends MediaWikiTestCase {

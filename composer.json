@@ -1,7 +1,7 @@
 {
 	"name": "mediawiki/interwikisorting",
 	"type": "mediawiki-extension",
-	"license": "GPL-2.0+",
+	"license": "GPL-2.0-or-later",
 	"require": {
 		"php": ">=5.5.9",
 		"composer/installers": ">=1.0.1"
