@@ -10,7 +10,7 @@ use InterwikiSorting\InterwikiSorter;
  * @license GPL-2.0-or-later
  * @author Katie Filbert < aude.wiki@gmail.com >
  */
-class InterwikiSorterTest extends \PHPUnit_Framework_TestCase {
+class InterwikiSorterTest extends \PHPUnit\Framework\TestCase {
 
 	public function sortOrdersProvider() {
 		return [
