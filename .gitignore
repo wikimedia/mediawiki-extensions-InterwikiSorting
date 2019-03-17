@@ -23,4 +23,3 @@ project.index
 sublime-*
 sftp-config.json
 .idea/
-/tests/phan/issues
