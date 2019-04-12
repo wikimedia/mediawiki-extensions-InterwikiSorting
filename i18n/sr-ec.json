@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Zoranzoki21"
+			"Zoranzoki21",
+			"BadDog"
 		]
 	},
-	"interwikisorting-desc": "Сортира интервики линкове"
+	"interwikisorting-desc": "Ређа међувики везе"
 }
