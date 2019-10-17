@@ -15,7 +15,7 @@ use MediaWikiTestCase;
 class InterwikiSortingHooksTest extends MediaWikiTestCase {
 
 	public function testHooksAreCorrectlyRegistered() {
-		$expectedHook = InterwikiSortingHooks::class. '::onContentAlterParserOutput';
+		$expectedHook = InterwikiSortingHooks::class . '::onContentAlterParserOutput';
 
 		// Make sure that the hook has been registered and is at the end of the list.
 		$onContentAlterParserOutputHooks = Hooks::getHandlers( 'ContentAlterParserOutput' );
