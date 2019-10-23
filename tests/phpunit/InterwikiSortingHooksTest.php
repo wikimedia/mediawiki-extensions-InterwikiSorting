@@ -7,7 +7,7 @@ use InterwikiSorting\InterwikiSortingHooks;
 use MediaWikiTestCase;
 
 /**
- * @covers InterwikiSorting\InterwikiSortingHooks
+ * @covers \InterwikiSorting\InterwikiSortingHooks
  *
  * @license GPL-2.0-or-later
  * @author Addshore

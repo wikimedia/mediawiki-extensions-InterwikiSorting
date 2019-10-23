@@ -12,7 +12,7 @@ namespace InterwikiSorting;
  */
 class InterwikiSorter {
 
-	const SORT_CODE = 'code';
+	private const SORT_CODE = 'code';
 
 	/**
 	 * @var array[]
@@ -47,7 +47,7 @@ class InterwikiSorter {
 
 	/**
 	 * Sort an array of links in-place
-	 * @version Copied from InterlanguageExtension rev 114818
+	 * Copied from InterlanguageExtension rev 114818
 	 *
 	 * @param string[] $links
 	 *
