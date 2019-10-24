@@ -5,7 +5,7 @@ namespace InterwikiSorting\Tests;
 use InterwikiSorting\InterwikiSorter;
 
 /**
- * @covers InterwikiSorting\InterwikiSorter
+ * @covers \InterwikiSorting\InterwikiSorter
  *
  * @license GPL-2.0-or-later
  * @author Katie Filbert < aude.wiki@gmail.com >
@@ -114,11 +114,12 @@ class InterwikiSorterTest extends \PHPUnit\Framework\TestCase {
 				[ 'e', 'c', 'a', 'b', 'd', 'f' ]
 			],
 			'Strict code order' => [
-				[ 'f', 'd', 'b', 'a', 'c', 'e' ],
-				'code',
-				[ 'alphabetic' => [ 'c', 'a' ] ], // this should be ignored
-				[ 'e' ], // prepend
-				[ 'e', 'a', 'b', 'c', 'd', 'f' ]
+				'links' => [ 'f', 'd', 'b', 'a', 'c', 'e' ],
+				'sort' => 'code',
+				// Sorting by "code" is hardcoded, all other orders should be ignored
+				'sortOrders' => [ 'alphabetic' => [ 'c', 'a' ] ],
+				'sortPrepend' => [ 'e' ],
+				'expected' => [ 'e', 'a', 'b', 'c', 'd', 'f' ]
 			],
 			'Code w/o alphabetic' => [
 				[ 'c', 'b', 'a' ],
