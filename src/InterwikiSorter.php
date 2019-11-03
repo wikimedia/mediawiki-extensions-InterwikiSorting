@@ -80,6 +80,7 @@ class InterwikiSorter {
 	 * @param string[] $b
 	 *
 	 * @return int
+	 * @suppress PhanTypeArraySuspiciousNullable $this->sortOrder is not null here
 	 */
 	private function compareLinks( array $a, array $b ) {
 		$a = $a[0];
