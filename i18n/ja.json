@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Otokoume"
+			"Otokoume",
+			"Shirayuki"
 		]
 	},
-	"interwikisorting-desc": "インターウィキのリンクをソートする"
+	"interwikisorting-desc": "インターウィキのリンクを並べ替える"
 }
