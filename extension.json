@@ -11,7 +11,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.31.0"
 	},
 	"config": {
 		"InterwikiSortingSort": {
@@ -27,10 +27,8 @@
 			"value": []
 		}
 	},
-	"AutoloadClasses": {
-		"InterwikiSorting\\InterwikiSorter": "src/InterwikiSorter.php",
-		"InterwikiSorting\\InterwikiSortingHooks": "src/InterwikiSortingHooks.php",
-		"InterwikiSorting\\InterwikiSortingHookHandlers": "src/InterwikiSortingHookHandlers.php"
+	"AutoloadNamespaces": {
+		"InterwikiSorting\\": "src/"
 	},
 	"ExtensionFunctions": [
 		"InterwikiSorting\\InterwikiSortingHooks::registerHook"
