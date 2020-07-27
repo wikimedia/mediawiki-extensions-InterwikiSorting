@@ -2,14 +2,14 @@
 
 namespace InterwikiSorting;
 
+use MediaWiki\Hook\LanguageLinksHook;
 use MediaWiki\MediaWikiServices;
-use ParserOutput;
 use Title;
 
 /**
  * @license GPL-2.0-or-later
  */
-class InterwikiSortingHookHandlers {
+class LanguageLinksHandler implements LanguageLinksHook {
 
 	/**
 	 * @var InterwikiSorter
@@ -19,7 +19,7 @@ class InterwikiSortingHookHandlers {
 	public static function newFromGlobalState() {
 		$config = MediaWikiServices::getInstance()->getMainConfig();
 
-		return new InterwikiSortingHookHandlers(
+		return new self(
 			new InterwikiSorter(
 				$config->get( 'InterwikiSortingSort' ),
 				$config->get( 'InterwikiSortingInterwikiSortOrders' ),
@@ -38,20 +38,22 @@ class InterwikiSortingHookHandlers {
 	}
 
 	/**
-	 * Hook runs after internal parsing
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ContentAlterParserOutput
+	 * Sort Interwiki links according to predefined config settings
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/LanguageLinks
 	 *
 	 * @param Title $title
-	 * @param ParserOutput $parserOutput
-	 *
-	 * @return bool
+	 * @param string[] &$languageLinks
+	 * @param array &$linkFlags
+	 * @return void
 	 */
-	public function doContentAlterParserOutput( Title $title, ParserOutput $parserOutput ) {
-		$interwikiLinks = $parserOutput->getLanguageLinks();
-		$sortedLinks = $this->interwikiSorter->sortLinks( $interwikiLinks );
-		$parserOutput->setLanguageLinks( $sortedLinks );
+	public function onLanguageLinks( $title, &$languageLinks, &$linkFlags ) : void {
+		// this hook tries to access repo SiteLinkTable
+		// it interferes with any test that parses something, like a page or a message
+		if ( defined( 'MW_PHPUNIT_TEST' ) ) {
+			return;
+		}
 
-		return true;
+		$languageLinks = $this->interwikiSorter->sortLinks( $languageLinks );
 	}
 
 }
