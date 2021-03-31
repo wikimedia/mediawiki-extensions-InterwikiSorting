@@ -33,7 +33,9 @@
 	"HookHandlers": {
 		"LanguageLinksHandler": {
 			"class": "InterwikiSorting\\LanguageLinksHandler",
-			"factory": "InterwikiSorting\\LanguageLinksHandler::newFromGlobalState"
+			"services": [
+				"MainConfig"
+			]
 		}
 	},
 	"Hooks": {

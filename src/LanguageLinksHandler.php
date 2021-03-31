@@ -2,8 +2,8 @@
 
 namespace InterwikiSorting;
 
+use Config;
 use MediaWiki\Hook\LanguageLinksHook;
-use MediaWiki\MediaWikiServices;
 use Title;
 
 /**
@@ -16,25 +16,17 @@ class LanguageLinksHandler implements LanguageLinksHook {
 	 */
 	private $interwikiSorter;
 
-	public static function newFromGlobalState() {
-		$config = MediaWikiServices::getInstance()->getMainConfig();
-
-		return new self(
-			new InterwikiSorter(
-				$config->get( 'InterwikiSortingSort' ),
-				$config->get( 'InterwikiSortingInterwikiSortOrders' ),
-				$config->get( 'InterwikiSortingSortPrepend' )
-			)
-		);
-	}
-
 	/**
-	 * @param InterwikiSorter $sorter
+	 * @param Config $config
 	 */
 	public function __construct(
-		InterwikiSorter $sorter
+		Config $config
 	) {
-		$this->interwikiSorter = $sorter;
+		$this->interwikiSorter = new InterwikiSorter(
+			$config->get( 'InterwikiSortingSort' ),
+			$config->get( 'InterwikiSortingInterwikiSortOrders' ),
+			$config->get( 'InterwikiSortingSortPrepend' )
+		);
 	}
 
 	/**
