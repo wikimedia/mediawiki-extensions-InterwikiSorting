@@ -46,7 +46,7 @@ class LanguageLinksHandler implements LanguageLinksHook {
 	 * @param array &$linkFlags
 	 * @return void
 	 */
-	public function onLanguageLinks( $title, &$languageLinks, &$linkFlags ) : void {
+	public function onLanguageLinks( $title, &$languageLinks, &$linkFlags ): void {
 		// this hook tries to access repo SiteLinkTable
 		// it interferes with any test that parses something, like a page or a message
 		if ( defined( 'MW_PHPUNIT_TEST' ) ) {
