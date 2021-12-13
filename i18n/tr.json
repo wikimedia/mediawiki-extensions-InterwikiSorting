@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Alikaan"
+			"Alikaan",
+			"MuratTheTurkish"
 		]
 	},
-	"interwikisorting-desc": "Interwiki linklerini düzenle"
+	"interwikisorting-desc": "Vikiarası bağlantılarını sıralama"
 }
