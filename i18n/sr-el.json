@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Zoranzoki21"
+			"Zoranzoki21",
+			"Kizule"
 		]
 	},
-	"interwikisorting-desc": "Sortira interviki linkove"
+	"interwikisorting-desc": "Ređa međuviki veze"
 }
