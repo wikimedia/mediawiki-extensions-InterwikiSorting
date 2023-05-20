@@ -12,7 +12,7 @@ use InterwikiSorting\InterwikiSorter;
  */
 class InterwikiSorterTest extends \PHPUnit\Framework\TestCase {
 
-	public function sortOrdersProvider() {
+	public static function sortOrdersProvider() {
 		return [
 			'alphabetic' => [ 'ar', 'de', 'en', 'fr', 'ks', 'rn', 'ky', 'hu', 'ja', 'pt' ],
 			'alphabetic_revised' => [ 'ar', 'de', 'en', 'fr', 'ks', 'ky', 'rn', 'hu', 'ja', 'pt' ],
@@ -21,8 +21,8 @@ class InterwikiSorterTest extends \PHPUnit\Framework\TestCase {
 		];
 	}
 
-	public function constructorProvider() {
-		$sortOrders = $this->sortOrdersProvider();
+	public static function constructorProvider() {
+		$sortOrders = self::sortOrdersProvider();
 
 		return [
 			[ 'code', $sortOrders, [] ],
@@ -38,8 +38,8 @@ class InterwikiSorterTest extends \PHPUnit\Framework\TestCase {
 		$this->assertInstanceOf( InterwikiSorter::class, $interwikiSorter );
 	}
 
-	public function sortLinksProvider() {
-		$sortOrders = $this->sortOrdersProvider();
+	public static function sortLinksProvider() {
+		$sortOrders = self::sortOrdersProvider();
 		$links = [ 'fr', 'ky', 'hu', 'ar', 'ks', 'ja', 'de', 'en', 'pt', 'rn' ];
 
 		return [
