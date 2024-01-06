@@ -2,7 +2,7 @@
 
 namespace InterwikiSorting;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\Hook\LanguageLinksHook;
 use MediaWiki\Title\Title;
 
