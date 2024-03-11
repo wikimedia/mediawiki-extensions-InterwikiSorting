@@ -69,7 +69,7 @@ class InterwikiSorterTest extends \PHPUnit\Framework\TestCase {
 				'alphabetic',
 				$sortOrders,
 				[ 'en', 'ja' ],
-				[ 'en', 'ja', 'ar', 'de','fr', 'ks', 'rn', 'ky', 'hu', 'pt' ]
+				[ 'en', 'ja', 'ar', 'de', 'fr', 'ks', 'rn', 'ky', 'hu', 'pt' ]
 			],
 			[
 				$links,
