@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
-	"interwikisorting-desc": "Interwiki-Linke zortéieren"
+	"interwikisorting-desc": "Interwiki-Linke sortéieren"
 }
