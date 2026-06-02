@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Daud I.F. Argana"
+			"Daud I.F. Argana",
+			"Bayahiu"
 		]
 	},
-	"interwikisorting-desc": "Urutkan pranala interwiki"
+	"interwikisorting-desc": "Urutkan pranala antarwiki"
 }
